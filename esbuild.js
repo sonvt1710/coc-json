@@ -17,7 +17,7 @@ let entryPlugin = {
         export {activate}
         `
       } else if (args.path == 'server.ts') {
-        contents = `require('./server/node/jsonServerMain')`
+        contents = 'require(\'./server/node/jsonServerMain\')'
       } else {
         throw new Error('Bad path')
       }
@@ -32,7 +32,7 @@ let entryPlugin = {
 async function start() {
   await require('esbuild').build({
     entryPoints: ['index.ts', 'server.ts'],
-    define: {'process.env.NODE_ENV': JSON.stringify("production")},
+    define: {'process.env.NODE_ENV': JSON.stringify('production')},
     bundle: true,
     platform: 'node',
     target: 'node14.14',
