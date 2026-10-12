@@ -3,6 +3,12 @@
   "version": 1,
   "schemas": [
     {
+      "name": "AI Page Manifest",
+      "description": "AI Page Manifest (AIPM) v1.2.0, per-page .ai.json metadata for AI crawlers and answer engines",
+      "fileMatch": ["*.ai.json"],
+      "url": "https://aigeoradar.com/schemas/aipm/1.2/page-manifest.schema.json"
+    },
+    {
       "name": "Ameba",
       "description": "Configuration file for Ameba, a Crystal linter and formatter",
       "fileMatch": [".ameba.yml", ".ameba.*.yml"],
@@ -10,6 +16,12 @@
       "versions": {
         "1.7.0": "https://raw.githubusercontent.com/crystal-ameba/ameba/v1.7.0/.ameba.yml.schema.json"
       }
+    },
+    {
+      "name": "CDF workspace config",
+      "description": "Cognitive Delivery governance contract: the .cdf/config.yaml of a CDF-governed workspace (adoption tier, review policy, provenance, CDI and break-glass settings, sealed fields)",
+      "fileMatch": ["**/.cdf/config.yaml"],
+      "url": "https://cognitive-delivery.github.io/contract/1.x/config-core.schema.json"
     },
     {
       "name": "Context Passport",
@@ -1102,6 +1114,18 @@
       "url": "https://github.com/cloudcannon/configuration-types/releases/latest/download/cloudcannon-schemas.schema.json"
     },
     {
+      "name": "CloudCannon Initial Site Settings",
+      "description": "Supporting configuration file for CloudCannon containing build settings and site mode for new sites",
+      "fileMatch": ["**/.cloudcannon/initial-site-settings.json"],
+      "url": "https://github.com/cloudcannon/configuration-types/releases/latest/download/cloudcannon-initial-site-settings.schema.json"
+    },
+    {
+      "name": "CloudCannon Routing",
+      "description": "Supporting configuration file for CloudCannon containing an array of route rules for redirects and rewrites",
+      "fileMatch": ["**/.cloudcannon/routing.json"],
+      "url": "https://github.com/cloudcannon/configuration-types/releases/latest/download/cloudcannon-routing.schema.json"
+    },
+    {
       "name": "Lando (landofile)",
       "description": "The configuration file for a Lando app. Documentation: https://github.com/lando-community/lando-spec",
       "fileMatch": [".lando.yml", ".lando.*.yml"],
@@ -1195,6 +1219,18 @@
       "description": "fly.io, a cloud provider, configuration",
       "fileMatch": ["fly.toml"],
       "url": "https://www.schemastore.org/fly.json"
+    },
+    {
+      "name": "Format config",
+      "description": "Configuration file for Format, for making PDFs with web technologies. Documentation: https://format.dev/docs/studio/configuration",
+      "fileMatch": ["format.config.json", "format.config.*.json"],
+      "url": "https://format.dev/schema/format-config.json"
+    },
+    {
+      "name": "Formhaus form definition",
+      "description": "Declarative JSON form definition for Formhaus, a headless form engine. Documentation: https://formhaus.dev",
+      "fileMatch": ["*.formhaus.json"],
+      "url": "https://formhaus.dev/schema/form-definition.json"
     },
     {
       "name": "Freifunk.de Community API",
@@ -1478,6 +1514,12 @@
       "url": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/partial-scheduled.json"
     },
     {
+      "name": "partial-inwards.json",
+      "description": "Inwards architecture linter configuration for pyproject.toml",
+      "fileMatch": [],
+      "url": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/partial-inwards.json"
+    },
+    {
       "name": "bozr.suite.json",
       "description": "Bozr test suite file",
       "fileMatch": [".suite.json", ".xsuite.json"],
@@ -1715,6 +1757,16 @@
       "description": "Backstage Catalog Info",
       "fileMatch": ["catalog-info.yaml", "*.catalog-info.yaml"],
       "url": "https://www.schemastore.org/catalog-info.json"
+    },
+    {
+      "name": "CausalJSON",
+      "description": "Open Causal Graph Format: causal graphs (DAGs, ADMGs, MAGs, PAGs, causal loop diagrams) with citation metadata",
+      "fileMatch": ["*.causal.json"],
+      "url": "https://opencausal.org/causaljson/0.2/causaljson.schema.json",
+      "versions": {
+        "0.1": "https://opencausal.org/causaljson/0.1/causaljson.schema.json",
+        "0.2": "https://opencausal.org/causaljson/0.2/causaljson.schema.json"
+      }
     },
     {
       "name": "Changie",
@@ -2740,6 +2792,18 @@
       "description": "Module metadata for the Dagger CI/CD engine: SDK, dependencies, and engine version",
       "fileMatch": ["dagger.json"],
       "url": "https://docs.dagger.io/reference/dagger.schema.json"
+    },
+    {
+      "name": "Dagger module (dagger-module.toml)",
+      "description": "Module manifest for the Dagger CI/CD engine: runtime, dependencies, and engine version",
+      "fileMatch": ["dagger-module.toml"],
+      "url": "https://docs.dagger.io/reference/dagger-module.schema.json"
+    },
+    {
+      "name": "Dagger workspace (dagger.toml)",
+      "description": "Workspace configuration for the Dagger CI/CD engine: installed modules, their settings, and SDKs",
+      "fileMatch": ["dagger.toml"],
+      "url": "https://docs.dagger.io/reference/dagger-workspace.schema.json"
     },
     {
       "name": "Dart Build Config (dart-build.json)",
@@ -4686,6 +4750,15 @@
       "url": "https://raw.githubusercontent.com/sergxerj/jdownloader2-crawler-rule-json-schema/main/jd2mcr.schema.json"
     },
     {
+      "name": "JDX",
+      "description": "JDX (Jupiter Data eXchange) declaration for registering musical works with collective management societies",
+      "fileMatch": ["*.jdx.json"],
+      "url": "https://jdx.jupiter.ar/schema/1.0/jdx.schema.json",
+      "versions": {
+        "1.0": "https://jdx.jupiter.ar/schema/1.0/jdx.schema.json"
+      }
+    },
+    {
       "name": "JFrog Applications Config",
       "description": "Refines JFrog Advanced Security scans behavior",
       "fileMatch": ["jfrog-apps-config.yml"],
@@ -5245,9 +5318,19 @@
       "description": "Mega-Linter configuration file (for Mega-Linter users)",
       "fileMatch": [
         ".mega-linter.yml",
+        ".mega-linter.yaml",
         ".megalinter.yml",
+        ".megalinter.yaml",
         "*.mega-linter-config.yml",
-        "*.megalinter-config.yml"
+        "*.megalinter-config.yml",
+        "**/.config/mega-linter.yml",
+        "**/.config/mega-linter.yaml",
+        "**/.config/.mega-linter.yml",
+        "**/.config/.mega-linter.yaml",
+        "**/.config/megalinter.yml",
+        "**/.config/megalinter.yaml",
+        "**/.config/.megalinter.yml",
+        "**/.config/.megalinter.yaml"
       ],
       "url": "https://raw.githubusercontent.com/oxsecurity/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json"
     },
@@ -6854,6 +6937,11 @@
       "url": "https://www.schemastore.org/rehyperc.json"
     },
     {
+      "name": "Reinigungsplan",
+      "description": "Structured cleaning plans with areas, services, recurrence, responsibilities and quality criteria",
+      "url": "https://xn--jonas-gebudereinigung-e2b.de/wp-content/uploads/2026/08/reinigungsplan-schema-1.0.0.json"
+    },
+    {
       "name": "release-please-config.json",
       "description": "Release Please manifest configuration file",
       "fileMatch": ["release-please-config.json"],
@@ -6895,16 +6983,22 @@
       "url": "https://github.com/Vivswan/github-settings-as-code/releases/latest/download/settings.schema.json"
     },
     {
-      "name": "reposets Configuration",
+      "name": "reposets.config.toml",
       "description": "Configuration for the reposets CLI tool for syncing GitHub repository settings",
       "fileMatch": ["reposets.config.toml", "reposets.config.json"],
-      "url": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/package/schemas/reposets.config.schema.json"
+      "url": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/schemas/3.0/config.json",
+      "versions": {
+        "3.0": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/schemas/3.0/config.json"
+      }
     },
     {
-      "name": "reposets Credentials",
+      "name": "reposets.credentials.toml",
       "description": "Authentication profiles for the reposets CLI tool",
       "fileMatch": ["reposets.credentials.toml", "reposets.credentials.json"],
-      "url": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/package/schemas/reposets.credentials.schema.json"
+      "url": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/schemas/3.0/credentials.json",
+      "versions": {
+        "3.0": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/schemas/3.0/credentials.json"
+      }
     },
     {
       "name": "*.resjson",
@@ -7301,6 +7395,12 @@
       "description": "Serenity code generator (sergen) configuration file",
       "fileMatch": ["sergen.json", "sergen.*.json", "*.sergen.json"],
       "url": "https://www.schemastore.org/sergen.json"
+    },
+    {
+      "name": "serve.json",
+      "description": "Configuration file for Vercel's serve static file server",
+      "fileMatch": ["vercel.serve.json"],
+      "url": "https://www.schemastore.org/serve.json"
     },
     {
       "name": "settings.job",
@@ -8060,6 +8160,17 @@
       "url": "https://cdn.jsdelivr.net/npm/tsup/schema.json"
     },
     {
+      "name": "ttheme market",
+      "description": "Market file of ttheme, which names a repository of terminal palettes",
+      "fileMatch": ["ttheme-market.toml"],
+      "url": "https://www.schemastore.org/ttheme-market.json"
+    },
+    {
+      "name": "ttheme palette",
+      "description": "Terminal palette file of ttheme",
+      "url": "https://www.schemastore.org/ttheme-palette.json"
+    },
+    {
       "name": "tusk.yml",
       "description": "tusk CLI configuration file",
       "fileMatch": ["tusk.yml", "tusk.yaml"],
@@ -8069,7 +8180,7 @@
       "name": "twee-ts",
       "description": "twee-ts compiler configuration file",
       "fileMatch": ["twee-ts.config.json"],
-      "url": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/twee-ts.config.json"
+      "url": "https://unpkg.com/@rohal12/twee-ts/schemas/twee-ts.config.schema.json"
     },
     {
       "name": "typewiz.json",
@@ -8726,6 +8837,12 @@
       "url": "https://www.schemastore.org/web-manifest-combined.json"
     },
     {
+      "name": "WebJEA configuration",
+      "description": "Configuration file for WebJEA, a web-based PowerShell JEA execution framework",
+      "fileMatch": ["webjea.json"],
+      "url": "https://www.schemastore.org/webjea.json"
+    },
+    {
       "name": "webjobs-list.json",
       "description": "Azure Webjob list file",
       "fileMatch": ["webjobs-list.json"],
@@ -9243,11 +9360,12 @@
       "name": "Apollo Router",
       "description": "Apollo Router: The runtime for graph-based API orchestration",
       "fileMatch": ["apollo-router-*.json"],
-      "url": "https://www.schemastore.org/apollo-router-2.9.0.json",
+      "url": "https://www.schemastore.org/apollo-router-2.17.0.json",
       "versions": {
         "2.8.1": "https://www.schemastore.org/apollo-router-2.8.1.json",
         "2.8.2": "https://www.schemastore.org/apollo-router-2.8.2.json",
-        "2.9.0": "https://www.schemastore.org/apollo-router-2.9.0.json"
+        "2.9.0": "https://www.schemastore.org/apollo-router-2.9.0.json",
+        "2.17.0": "https://www.schemastore.org/apollo-router-2.17.0.json"
       }
     },
     {
@@ -10471,6 +10589,42 @@
       "description": "Valid for any JSON file",
       "fileMatch": [],
       "url": "https://www.schemastore.org/any.json"
+    },
+    {
+      "name": "ZeroPress Build Pages Config",
+      "description": "Configuration for building ZeroPress sites from Markdown",
+      "fileMatch": ["**/.zeropress/config.json"],
+      "url": "https://www.schemastore.org/zeropress-build-pages-config-1.0.json",
+      "versions": {
+        "1.0": "https://www.schemastore.org/zeropress-build-pages-config-1.0.json"
+      }
+    },
+    {
+      "name": "ZeroPress Preview Data",
+      "description": "Site data for ZeroPress static builds and theme previews",
+      "fileMatch": ["zeropress-preview-data.json"],
+      "url": "https://www.schemastore.org/zeropress-preview-data-0.7.json",
+      "versions": {
+        "0.7": "https://www.schemastore.org/zeropress-preview-data-0.7.json"
+      }
+    },
+    {
+      "name": "ZeroPress Theme Runtime",
+      "description": "Theme manifests for the ZeroPress template runtime",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/zeropress-theme-runtime-0.7.json",
+      "versions": {
+        "0.7": "https://www.schemastore.org/zeropress-theme-runtime-0.7.json"
+      }
+    },
+    {
+      "name": "ZeroPress WXR Import Base",
+      "description": "Base settings for importing WordPress exports with ZeroPress",
+      "fileMatch": ["wxr-import-base.json"],
+      "url": "https://www.schemastore.org/zeropress-wxr-import-base-0.7.json",
+      "versions": {
+        "0.7": "https://www.schemastore.org/zeropress-wxr-import-base-0.7.json"
+      }
     },
     {
       "name": "zerops.yml",
@@ -11740,22 +11894,24 @@
       "name": "cfgd Config",
       "description": "cfgd root configuration file (cfgd.yaml)",
       "fileMatch": ["cfgd.yaml", "cfgd.yml"],
-      "url": "https://www.schemastore.org/cfgd-config-0.11.0.json",
+      "url": "https://www.schemastore.org/cfgd-config-0.12.0.json",
       "versions": {
         "0.5.0": "https://www.schemastore.org/cfgd-config-0.5.0.json",
         "0.10.0": "https://www.schemastore.org/cfgd-config-0.10.0.json",
-        "0.11.0": "https://www.schemastore.org/cfgd-config-0.11.0.json"
+        "0.11.0": "https://www.schemastore.org/cfgd-config-0.11.0.json",
+        "0.12.0": "https://www.schemastore.org/cfgd-config-0.12.0.json"
       }
     },
     {
       "name": "cfgd Module",
       "description": "cfgd Module definition document",
       "fileMatch": ["**/modules/*/module.yaml"],
-      "url": "https://www.schemastore.org/cfgd-module-0.11.0.json",
+      "url": "https://www.schemastore.org/cfgd-module-0.12.0.json",
       "versions": {
         "0.5.0": "https://www.schemastore.org/cfgd-module-0.5.0.json",
         "0.10.0": "https://www.schemastore.org/cfgd-module-0.10.0.json",
-        "0.11.0": "https://www.schemastore.org/cfgd-module-0.11.0.json"
+        "0.11.0": "https://www.schemastore.org/cfgd-module-0.11.0.json",
+        "0.12.0": "https://www.schemastore.org/cfgd-module-0.12.0.json"
       }
     },
     {
@@ -11766,22 +11922,24 @@
         "**/profiles/*.yaml",
         "**/profiles/*.yml"
       ],
-      "url": "https://www.schemastore.org/cfgd-profile-0.11.0.json",
+      "url": "https://www.schemastore.org/cfgd-profile-0.12.0.json",
       "versions": {
         "0.5.0": "https://www.schemastore.org/cfgd-profile-0.5.0.json",
         "0.10.0": "https://www.schemastore.org/cfgd-profile-0.10.0.json",
-        "0.11.0": "https://www.schemastore.org/cfgd-profile-0.11.0.json"
+        "0.11.0": "https://www.schemastore.org/cfgd-profile-0.11.0.json",
+        "0.12.0": "https://www.schemastore.org/cfgd-profile-0.12.0.json"
       }
     },
     {
       "name": "cfgd ConfigSource",
       "description": "cfgd multi-source configuration manifest (cfgd-source.yaml)",
       "fileMatch": ["cfgd-source.yaml", "cfgd-source.yml"],
-      "url": "https://www.schemastore.org/cfgd-configsource-0.11.0.json",
+      "url": "https://www.schemastore.org/cfgd-configsource-0.12.0.json",
       "versions": {
         "0.5.0": "https://www.schemastore.org/cfgd-configsource-0.5.0.json",
         "0.10.0": "https://www.schemastore.org/cfgd-configsource-0.10.0.json",
-        "0.11.0": "https://www.schemastore.org/cfgd-configsource-0.11.0.json"
+        "0.11.0": "https://www.schemastore.org/cfgd-configsource-0.11.0.json",
+        "0.12.0": "https://www.schemastore.org/cfgd-configsource-0.12.0.json"
       }
     },
     {
@@ -11862,9 +12020,9 @@
       "url": "https://defakto-security.github.io/build-actions/ci.schema.json"
     },
     {
-      "name": "AAES evidence export (aaes.export/v1)",
-      "description": "One JSON value in an aaes.export/v1 JSON Lines evidence export: a header, entry, or anchor line recording authorization decisions for AI agent actions; cryptographic verification is separate from structural validation",
-      "url": "https://aaes.ai/spec/v1/export.schema.json"
+      "name": "AAES evidence export (aaes.export/v2)",
+      "description": "One JSON value in an aaes.export/v2 JSON Lines evidence export: a header, entry, or anchor line recording authorization decisions for AI agent actions; cryptographic verification is separate from structural validation",
+      "url": "https://aaes.ai/spec/v2/export.schema.json"
     },
     {
       "name": "AAES evidence pack manifest (aaes.evidence-pack/1)",
@@ -11930,6 +12088,24 @@
       "description": "Allstar security policy configuration",
       "fileMatch": [],
       "url": "https://www.schemastore.org/allstar-security.json"
+    },
+    {
+      "name": "debim",
+      "description": "Declarative BIM (Building-as-Code) project manifest",
+      "fileMatch": [
+        "*.debim",
+        "*.debim.yaml",
+        "*.debim.yml",
+        "*.dbim",
+        "*.dbim.yaml",
+        "*.dbim.yml",
+        "project.debim",
+        "project.debim.yaml"
+      ],
+      "url": "https://raw.githubusercontent.com/PRIDA-TAKON/debim/main/debim.schema.json",
+      "versions": {
+        "1.0": "https://raw.githubusercontent.com/PRIDA-TAKON/debim/main/debim.schema.json"
+      }
     }
   ]
 }
